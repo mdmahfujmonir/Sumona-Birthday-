@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="A little birthday experience made with care for Sumona.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Midnight Wish | A Birthday Experience for Sumona">
+  <meta property="og:description" content="Some days deserve a little extra magic.">
+  <meta property="og:type" content="website">
+  <title>Midnight Wish | A Birthday Experience for Sumona</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader-moon"></div>
+    <p>Preparing a little something special...</p>
+    <div class="loader-line"><span></span></div>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="moon"></div>
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+    <div class="stars" id="stars"></div>
+    <div class="shooting-star"></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Midnight Wish home">
+      <span class="brand-mark">✦</span><span>MIDNIGHT <b>WISH</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#birthday">Birthday</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#story">Story</a>
+      <a href="#letter">Letter</a>
+      <a href="#wishes">Wishes</a>
+      <a href="#final">Final Wish</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span></span> THIS NIGHT IS A LITTLE MORE SPECIAL <span></span></p>
+        <p class="hero-kicker">A LITTLE DIGITAL GIFT</p>
+        <h1>Happy Birthday,<br><em>Sumona</em></h1>
+        <p class="hero-subtitle">Some days deserve a little extra magic.</p>
+        <p class="hero-copy">Tonight, a little corner of the internet is dedicated to celebrating you.</p>
+        <a class="button button-primary" href="#birthday">Open your surprise <span>↗</span></a>
+        <p class="microcopy">A little journey, made with care.</p>
+      </div>
+      <a class="scroll-cue" href="#birthday" aria-label="Scroll to birthday section"><span></span> SCROLL TO EXPLORE</a>
+      <div class="hero-orbit" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="orbit-star">✦</span></div>
+    </section>
+
+    <section class="section birthday-section" id="birthday">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A DATE WORTH CELEBRATING</p>
+        <h2>A little closer to <em>your day</em></h2>
+        <p class="section-intro" id="countdownMessage">A beautiful day is getting closer.</p>
+      </div>
+      <div class="countdown reveal" id="countdown" aria-label="Birthday countdown">
+        <div class="time-card"><strong id="days">--</strong><span>Days</span></div>
+        <div class="time-card"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="time-card"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="time-card"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <div class="cake-wrap reveal">
+        <p class="eyebrow">A SMALL MOMENT OF MAGIC</p>
+        <h3>Make a wish, Sumona</h3>
+        <div class="cake-scene" id="cakeScene">
+          <div class="candle-row"><span class="candle"><i class="flame"></i></span><span class="candle"><i class="flame"></i></span><span class="candle"><i class="flame"></i></span></div>
+          <div class="cake cake-top"></div><div class="cake cake-middle"></div><div class="cake cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <button class="button button-outline" id="wishButton">Make a wish <span>✦</span></button>
+        <p class="cake-message" id="cakeMessage" aria-live="polite">May every little wish in your heart find its way into reality.</p>
+        <button class="text-button hidden" id="relightButton">Light the candles again</button>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A COLLECTION OF LITTLE MOMENTS</p>
+        <h2>A <em>beautiful soul</em></h2>
+        <p class="section-intro">Some moments are beautiful simply because they exist.</p>
+      </div>
+      <div class="gallery-note reveal"><span>✦</span> Add your favourite photographs to make this space yours.</div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <p class="gallery-footnote">A few snapshots, each with its own little charm.</p>
+    </section>
+
+    <section class="section moments-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">LITTLE THINGS WORTH NOTICING</p>
+        <h2>Beautiful in your <em>own way</em></h2>
+      </div>
+      <div class="moments-grid">
+        <article class="moment-card reveal"><span class="moment-number">01</span><span class="moment-icon">☾</span><h3>Your smile</h3><p>May you always find reasons to smile, even on ordinary days.</p></article>
+        <article class="moment-card reveal"><span class="moment-number">02</span><span class="moment-icon">✧</span><h3>Your individuality</h3><p>There is something special about being unapologetically yourself.</p></article>
+        <article class="moment-card reveal"><span class="moment-number">03</span><span class="moment-icon">☆</span><h3>Your dreams</h3><p>May you always have the courage to follow the things that matter to you.</p></article>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A SMALL LOOK BACK</p>
+        <h2>Every chapter has its <em>place</em></h2>
+        <p class="section-intro">A few moments from a long and winding timeline.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><span class="timeline-year">2018</span><div class="timeline-card"><span class="timeline-dot"></span><h3>An unexpected chapter began</h3><p>Some memories start in the most ordinary ways and quietly become part of our story.</p></div></article>
+        <article class="timeline-item reveal"><span class="timeline-year">AFTERWARD</span><div class="timeline-card"><span class="timeline-dot"></span><h3>Life took its own direction</h3><p>Time passed, and everyone continued along their own path.</p></div></article>
+        <article class="timeline-item reveal"><span class="timeline-year">A LONG PAUSE</span><div class="timeline-card"><span class="timeline-dot"></span><h3>Some things became memories</h3><p>Even when life moves forward, the past can remain a gentle part of the story.</p></div></article>
+        <article class="timeline-item reveal"><span class="timeline-year">2026</span><div class="timeline-card"><span class="timeline-dot"></span><h3>A familiar conversation returned</h3><p>It was nice to reconnect and discover that a simple conversation can still feel familiar.</p></div></article>
+      </div>
+      <p class="timeline-note reveal">Every chapter has its own place, and every person deserves the freedom to write their next one.</p>
+    </section>
+
+    <section class="section letter-section" id="letter">
+      <div class="section-heading reveal">
+        <p class="eyebrow">SOMETHING FROM THE HEART</p>
+        <h2>A little <em>note for you</em></h2>
+        <p class="section-intro">A few words, written with genuine care.</p>
+      </div>
+      <div class="letter-stage reveal">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div><div class="letter-paper"><span class="paper-spark">✦</span><span>A little note<br>for you</span></div>
+          <div class="envelope-front"></div><div class="envelope-flap"></div><div class="wax-seal">✦</div>
+        </div>
+        <button class="button button-primary" id="openLetter">Open your letter</button>
+      </div>
+    </section>
+
+    <section class="section wishes-section" id="wishes">
+      <div class="section-heading reveal">
+        <p class="eyebrow">TEN LITTLE THOUGHTS</p>
+        <h2>10 little <em>wishes</em></h2>
+        <p class="section-intro">Tap a star and open a wish made just for your day.</p>
+      </div>
+      <div class="wishes-grid" id="wishesGrid"></div>
+    </section>
+
+    <section class="section appreciate-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A FEW KIND THOUGHTS</p>
+        <h2>Things worth <em>appreciating</em></h2>
+      </div>
+      <div class="appreciate-list reveal">
+        <span>Individuality</span><span>Kindness</span><span>Determination</span><span>Curiosity</span><span>Humour</span><span>Dreams</span><span>Strength</span><span>Perspective</span><span>Creativity</span><span>Being yourself</span>
+      </div>
+      <p class="soft-note reveal">The best things about a person are never limited to a list.</p>
+    </section>
+
+    <section class="section gifts-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A FEW LITTLE SURPRISES</p>
+        <h2>Unwrap a little <em>something</em></h2>
+      </div>
+      <div class="gift-grid">
+        <button class="gift-card reveal" data-gift="0"><span class="gift-emoji">🎁</span><b>A little reminder</b><small>Tap to open</small></button>
+        <button class="gift-card reveal" data-gift="1"><span class="gift-emoji">🎀</span><b>A little motivation</b><small>Tap to open</small></button>
+        <button class="gift-card reveal" data-gift="2"><span class="gift-emoji">✨</span><b>A little smile</b><small>Tap to open</small></button>
+      </div>
+    </section>
+
+    <section class="section open-when-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">FOR ANOTHER DAY</p>
+        <h2>Open when you need a <em>reminder</em></h2>
+        <p class="section-intro">Small notes for ordinary moments.</p>
+      </div>
+      <div class="open-when-grid">
+        <button class="open-when-card reveal" data-openwhen="0"><span>☾</span>When you feel sad <b>↗</b></button>
+        <button class="open-when-card reveal" data-openwhen="1"><span>☁</span>When you feel tired <b>↗</b></button>
+        <button class="open-when-card reveal" data-openwhen="2"><span>✧</span>When you doubt yourself <b>↗</b></button>
+        <button class="open-when-card reveal" data-openwhen="3"><span>☆</span>When you need a smile <b>↗</b></button>
+      </div>
+    </section>
+
+    <section class="section quiz-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">JUST FOR FUN</p>
+        <h2>A tiny birthday <em>game</em></h2>
+        <p class="section-intro">No right answers. Just a little pause for fun.</p>
+      </div>
+      <div class="quiz-card reveal" id="quizCard">
+        <div class="quiz-top"><span>THE BIRTHDAY MINI QUIZ</span><span id="quizProgress">01 / 03</span></div>
+        <h3 id="quizQuestion">Which deserves more celebration?</h3>
+        <div class="quiz-options" id="quizOptions"></div>
+        <p class="quiz-result hidden" id="quizResult">Excellent choice. May your day have plenty of it!</p>
+        <div class="quiz-actions"><button class="text-button" id="skipQuiz">Skip this game</button><button class="button button-outline hidden" id="nextQuiz">Next question</button></div>
+      </div>
+    </section>
+
+    <section class="section future-section">
+      <div class="future-glow"></div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">FOR ALL THE DAYS AHEAD</p>
+        <h2>May the future be <em>beautiful</em></h2>
+      </div>
+      <div class="future-wishes">
+        <p class="reveal">May your next chapter be full of opportunities.</p>
+        <p class="reveal">May your hard work be recognised.</p>
+        <p class="reveal">May you meet people who genuinely respect you.</p>
+        <p class="reveal">May your future be brighter than your worries.</p>
+        <p class="reveal">May you always remain true to yourself.</p>
+      </div>
+    </section>
+
+    <section class="section final-section" id="final">
+      <div class="final-fireworks" id="fireworks" aria-hidden="true"></div>
+      <div class="final-content reveal">
+        <p class="eyebrow">ONE LAST WISH</p>
+        <span class="final-star">✦</span>
+        <h2>Happy Birthday,<br><em>Sumona</em></h2>
+        <p>May your life be filled with countless beautiful moments.</p>
+        <h3>Stay Happy. Stay Blessed.<br>Keep Smiling.</h3>
+        <div class="signature-line"></div>
+        <p class="signature">From someone who wishes you well.</p>
+        <button class="button button-primary" id="replayButton">Replay the experience ↻</button>
+        <a class="text-button back-top" href="#home">Back to the beginning ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="footer-star">✦</span>
+    <p>Made with care, just to make your day a little more special.</p>
+    <small>14 November 2026 · MIDNIGHT WISH</small>
+    <small>From someone who wishes you well.</small>
+  </footer>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Play background music" title="Music on/off">♫</button>
+  <audio id="backgroundMusic" src="assets/music/background.mp3" loop preload="none"></audio>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <div class="modal" id="contentModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" data-close-modal aria-label="Close dialog">×</button>
+      <span class="modal-ornament">✦</span>
+      <p class="eyebrow" id="modalEyebrow">A LITTLE NOTE</p>
+      <h2 id="modalTitle">A little thought</h2>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Photo viewer" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo">×</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <figure><img id="lightboxImage" src="" alt=""><figcaption id="lightboxCaption"></figcaption><small id="lightboxCounter"></small></figure>
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
